@@ -42,6 +42,5 @@ def split(dataset, val_percent):
 # batch size
 train_ds, val_ds = split(dataset, 0.2)
 NUM_BATCH = 128
-train_loader = DataLoader(train_ds, batch_size=NUM_BATCH, shuffle=True, num_workers=4, pin_memory=True)
-val_loader = DataLoader(val_ds, batch_size=NUM_BATCH, num_workers=4, pin_memory=True)
-
+train_loader = DataLoader(train_ds, batch_size=NUM_BATCH, shuffle=True)
+val_loader = DataLoader(val_ds, batch_size=NUM_BATCH)
